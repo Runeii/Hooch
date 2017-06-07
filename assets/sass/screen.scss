@@ -942,19 +942,6 @@ body:not(.home) {
 
 //Animation
 .js {
-  body {
-    background-color: black;
-    &:not(.pace-done) *:not(.pace) * {
-      opacity:0;
-      transition:none;
-    }
-    &.pace-done {
-      *:not(.pace) * {
-        opacity:initial;
-        transition:opacity 0.5s;
-      }
-    }
-  }
   @media #{$small} {
     #lemon-slot, #hoola-slot {
       .copy {
