@@ -100,10 +100,10 @@ function custom_excerpt($post, $num) {
 }
 
 function update_instagram(){
-  $json = file_get_contents('https://www.instagram.com/explore/tags/HoosForAHooch/?__a=1');
+  $json = file_get_contents('https://www.instagram.com/hoochlemonbrew/?__a=1');
   $json = json_decode($json);
   $output = get_option( 'instagram_feed_record', 'break' );
-  foreach($json->tag->media->nodes as $post) {
+  foreach($json->user->media->nodes as $post) {
     if(is_array($output) && !array_key_exists($post->id, $output)) {
       $output[$post->id] = $post;
       $output[$post->id]->approved = null;
@@ -121,7 +121,7 @@ function output_instagram(){
   $feed = update_instagram();
   $output = '';
   $i = 1;
-  foreach($feed->tag->media->nodes as $post) {
+  foreach($feed->user->media->nodes as $post) {
     preg_match_all('/(#\w+)/', $post->caption, $hashtags);
     $copy = preg_replace ('/(#\w+)/', '', $post->caption);
     $output .= '<div class="col-12 col-sm-6 col-md-4">';

@@ -9079,15 +9079,6 @@ body:not(.home) article.single {
     position: relative;
     text-shadow: 1px 1px 1px #fff8cb; }
 
-.js body {
-  background-color: black; }
-  .js body:not(.pace-done) *:not(.pace) * {
-    opacity: 0;
-    transition: none; }
-  .js body.pace-done *:not(.pace) * {
-    opacity: initial;
-    transition: opacity 0.5s; }
-
 @media screen and (min-width: 576px) {
   .js #lemon-slot .copy, .js #hoola-slot .copy {
     opacity: 0;

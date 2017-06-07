@@ -78,7 +78,6 @@ var myLazyLoad = new LazyLoad();
   function check_scroll() {
     var scroll = $(window).scrollTop();
     if (section === 2 && scroll >= section_stages.three || section === 3 && scroll <= section_stages.three) {
-      console.log('Triggered section ' + section);
       $("#lemon-bg path").each(function (index) {
         $(this).css({
           'transition-delay': 0.5 + 0.01 * index + 's'
@@ -86,19 +85,14 @@ var myLazyLoad = new LazyLoad();
       });
       lemon_slot.addClass('animate');
       section = section === 2 ? 3 : 2;
-      console.log('Now on section ' + section);
     } else if (section === 3 && scroll >= section_stages.four || section === 4 && scroll <= section_stages.four) {
-      console.log('Triggered section ' + section);
       hoochlife_bg.toggle();
       VivusHoola.play();
       hoola_slot.addClass('animate');
       section = section === 3 ? 4 : 3;
-      console.log('Now on section ' + section);
     } else if (section === 4 && scroll >= section_stages.five || section === 5 && scroll <= section_stages.five) {
-      console.log('Triggered section ' + section);
       $(whatson).toggleClass('fixed');
       section = section === 4 ? 5 : 4;
-      console.log('Now on section ' + section);
     }
   }
 
@@ -123,8 +117,8 @@ var myLazyLoad = new LazyLoad();
     //Scrolling variables
     section_stages = {
       two: liquidgold.offset().top,
-      three: hoola_slot.offset().top - 1.5 * windowHeight,
-      four: whatson.offset().top - 1.5 * windowHeight,
+      three: hoola_slot.offset().top - 1.75 * windowHeight,
+      four: whatson.offset().top - 1.75 * windowHeight,
       five: whatson.offset().top + whatson.outerHeight(true) - windowHeight
     };
     section = 2;
