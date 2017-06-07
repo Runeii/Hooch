@@ -1,0 +1,35 @@
+.instagram_card {
+  width:250px;
+  height:auto;
+  background-color:#fedb00;
+  border: 2px solid #fedb00;
+  margin: 0 1.5rem 1.5rem 0;
+  display:inline-block;
+  vertical-align: top;
+  opacity:0.5;
+}
+.instagram_card.approved {
+  background-color:rgb(80,158,47);
+  border-color:rgb(80,158,47);
+}
+.instagram_card.declined {
+  background-color:rgb(200,16,46);
+  opacity:0.2 !important;
+  border-color:rgb(200,16,46);
+}
+.instagram_card p {
+  height:4.5rem;
+  text-overflow: ellipsis;
+  overflow:hidden;
+  color:black;
+  padding:1rem;
+}
+.instagram_card img {
+  width:100%;
+}
+.settings_page_manage_social input[type="checkbox"] {
+  display:none;
+}
+input[type="checkbox"]:checked+label {
+  opacity:1;
+}
