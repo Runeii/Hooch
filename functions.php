@@ -15,14 +15,14 @@ function disable_wp_emojicons() {
 add_action( 'init', 'disable_wp_emojicons' );
 
 function hooch_scripts_styles() {
-    wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/style-min.css', array(), '1.2.4');
+    wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/style-min.css', array(), '1.2.5');
     wp_enqueue_script( 'jquery');
-    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/js/scripts-min.js', array(), '1.2.4', true);
+    wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/js/scripts-min.js', array(), '1.2.5', true);
 }
 add_action( 'wp_enqueue_scripts', 'hooch_scripts_styles' );
 add_action( 'admin_enqueue_scripts', 'hooch_scripts_styles_admin' );
 function hooch_scripts_styles_admin() {
-  wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/assets/css/admin-style.css', false, '1.2.3' );
+  wp_enqueue_style( 'admin_css', get_template_directory_uri() . '/assets/css/admin-style.css', false, '1.2.5' );
  }
 
 add_filter('show_admin_bar', '__return_false');
