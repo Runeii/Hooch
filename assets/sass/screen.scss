@@ -1129,20 +1129,21 @@ Page designs
   .fixed-backdrop {
     background-color:$black;
     opacity:0.6;
+    background-image:url('../img/pages/boomtown-bg-mobile.jpg');
     @media #{$small} {
-      background-image:url('../img/pages/hoochlife-small.jpg');
+      background-image:url('../img/pages/boomtown-bg-small.jpg');
     }
     @media #{$medium} {
-      background-image:url('../img/pages/hoochlife-medium.jpg');
+      background-image:url('../img/pages/boomtown-bg-medium.jpg');
     }
     @media #{$large} {
-      background-image:url('../img/pages/hoochlife-large.jpg');
+      background-image:url('../img/pages/boomtown-bg.jpg');
     }
     @media #{$extra-large} {
       background-image:url('../img/pages/boomtown-bg.png');
     }
     @media #{$full} {
-      background-image:url('../img/pages/hoochlife-full.jpg');
+      background-image:url('../img/pages/boomtown-bg.jpg');
     }
   }
 }

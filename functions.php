@@ -15,7 +15,7 @@ function disable_wp_emojicons() {
 add_action( 'init', 'disable_wp_emojicons' );
 
 function hooch_scripts_styles() {
-    wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/style-min.css', array(), '1.2.7');
+    wp_enqueue_style( 'main', get_template_directory_uri() . '/assets/css/style-min.css', array(), '1.2.8');
     wp_enqueue_script( 'jquery');
     wp_enqueue_script( 'scripts', get_template_directory_uri() . '/assets/js/scripts-min.js', array(), '1.2.6', true);
 }
