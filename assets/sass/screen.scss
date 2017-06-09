@@ -702,6 +702,9 @@ nav {
     }
   }
 }
+.no-footer + footer {
+  display: none;
+}
 footer {
   position: relative;
   z-index:3;
@@ -801,7 +804,32 @@ footer {
       margin-bottom:6rem;
     }
   }
-  input {
+  .icons {
+      text-align: center;
+  }
+  i {
+    color: white;
+    font-size:5rem;
+  }
+}
+#page {
+  position: relative;
+  z-index:3;
+  padding:3rem 0 1.5rem;
+  @media #{$small} {
+    margin:0;
+  }
+  .banner {
+    color: white;
+  }
+  .sub-banner {
+    color: $yellow;
+    margin-bottom:3rem;
+    @media #{$small} {
+      margin-bottom:6rem;
+    }
+  }
+  input, label, .wpcf7-list-item-label {
     text-transform: uppercase;
     font-family:$header-font;
     font-weight:bold;
@@ -810,15 +838,23 @@ footer {
       font-size:2.5rem;
     }
   }
-  input[type='email'] {
-    background-color:$black;
+  .wpcf7-list-item-label {
+    font-size:0.667rem;
+    @media #{$small} {
+      font-size:1rem;
+    }
+  }
+  input {
+    background-color:$yellow;
     border-color:transparent;
-    color:rgba($yellow, 1);
+    color:rgba($black, 1);
     transition: 0.5s all;
     padding:0;
     outline:none !important;
     flex-grow:0.4;
     text-align:center;
+    max-width: 100%;
+    width:100%;
     @media #{$small} {
       padding:0 2rem 0 1rem;
       text-align:left;
@@ -829,7 +865,7 @@ footer {
       animation-timing-function: ease;
     }
     &::placeholder {
-      color:rgba($yellow, 1);
+      color:rgba($black, 1);
       transition: 0.5s all;
     }
     &:hover {
@@ -847,20 +883,27 @@ footer {
       animation:none !important;
     }
   }
+  input[type='checkbox'] {
+    width:1rem;
+    height:1rem;
+  }
+  .wpcf7-checkbox span.wpcf7-list-item {
+    margin:1.5rem 0;
+  }
   input[type='submit'] {
     background-color:$yellow;
     color:$black;
     border:none;
-    margin:0;
+    margin:0 auto;
+    width:auto;
     cursor:pointer;
+    padding:0 1rem;
     transition: transform 0.3s ease-out;
+    -webkit-appearance:none;
+    appearance:none;
+    margin-bottom:6rem;
     &:hover {
       transform:scale(1.05);
-    }
-  }
-  @media #{$large} {
-    input[type='submit'] {
-      margin-left:0.5rem;
     }
   }
   .icons {
@@ -939,7 +982,11 @@ body:not(.home) {
     text-shadow:1px 1px 1px lighten($yellow, 40%);
   }
 }
-
+body.page {
+  .content {
+    padding:0;
+  }
+}
 //Animation
 .js {
   @media #{$small} {
@@ -1067,5 +1114,32 @@ body:not(.home) {
   &.finished path {
     stroke-width: 0 !important;
     fill-opacity: 1;
+  }
+}
+
+/*
+Page designs
+
+*/
+
+.page-template-page-boomtown {
+  .fixed-backdrop {
+    background-color:$black;
+    opacity:0.6;
+    @media #{$small} {
+      background-image:url('../img/pages/hoochlife-small.jpg');
+    }
+    @media #{$medium} {
+      background-image:url('../img/pages/hoochlife-medium.jpg');
+    }
+    @media #{$large} {
+      background-image:url('../img/pages/hoochlife-large.jpg');
+    }
+    @media #{$extra-large} {
+      background-image:url('../img/pages/boomtown-bg.png');
+    }
+    @media #{$full} {
+      background-image:url('../img/pages/hoochlife-full.jpg');
+    }
   }
 }

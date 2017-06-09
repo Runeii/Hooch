@@ -8891,6 +8891,9 @@ nav {
     #social img.loaded {
       opacity: 1; }
 
+.no-footer + footer {
+  display: none; }
+
 footer {
   position: relative;
   z-index: 3;
@@ -8965,25 +8968,53 @@ footer {
     @media screen and (min-width: 576px) {
       #contact .sub-banner {
         margin-bottom: 6rem; } }
-  #contact input {
+  #contact .icons {
+    text-align: center; }
+  #contact i {
+    color: white;
+    font-size: 5rem; }
+
+#page {
+  position: relative;
+  z-index: 3;
+  padding: 3rem 0 1.5rem; }
+  @media screen and (min-width: 576px) {
+    #page {
+      margin: 0; } }
+  #page .banner {
+    color: white; }
+  #page .sub-banner {
+    color: #fedb00;
+    margin-bottom: 3rem; }
+    @media screen and (min-width: 576px) {
+      #page .sub-banner {
+        margin-bottom: 6rem; } }
+  #page input, #page label, #page .wpcf7-list-item-label {
     text-transform: uppercase;
     font-family: Futura-PT-Condensed, Arial Narrow, Trebuchet MS, Arial, sans-serif;
     font-weight: bold;
     font-size: 2rem; }
     @media screen and (min-width: 576px) {
-      #contact input {
+      #page input, #page label, #page .wpcf7-list-item-label {
         font-size: 2.5rem; } }
-  #contact input[type='email'] {
-    background-color: black;
+  #page .wpcf7-list-item-label {
+    font-size: 0.667rem; }
+    @media screen and (min-width: 576px) {
+      #page .wpcf7-list-item-label {
+        font-size: 1rem; } }
+  #page input {
+    background-color: #fedb00;
     border-color: transparent;
-    color: #fedb00;
+    color: black;
     transition: 0.5s all;
     padding: 0;
     outline: none !important;
     flex-grow: 0.4;
-    text-align: center; }
+    text-align: center;
+    max-width: 100%;
+    width: 100%; }
     @media screen and (min-width: 576px) {
-      #contact input[type='email'] {
+      #page input {
         padding: 0 2rem 0 1rem;
         text-align: left;
         animation-direction: normal;
@@ -8991,35 +9022,42 @@ footer {
         animation-iteration-count: infinite;
         animation-name: border-left-blink;
         animation-timing-function: ease; } }
-    #contact input[type='email']::placeholder {
-      color: #fedb00;
+    #page input::placeholder {
+      color: black;
       transition: 0.5s all; }
-    #contact input[type='email']:hover {
+    #page input:hover {
       border-left-color: transparent;
       border-bottom-color: rgba(254, 219, 0, 0.4);
       animation: none !important; }
-      #contact input[type='email']:hover::placeholder {
+      #page input:hover::placeholder {
         margin: initial 2rem;
         color: rgba(254, 219, 0, 0.4); }
-    #contact input[type='email']:focus {
+    #page input:focus {
       border-left-color: transparent;
       border-bottom-color: #fedb00;
       animation: none !important; }
-  #contact input[type='submit'] {
+  #page input[type='checkbox'] {
+    width: 1rem;
+    height: 1rem; }
+  #page .wpcf7-checkbox span.wpcf7-list-item {
+    margin: 1.5rem 0; }
+  #page input[type='submit'] {
     background-color: #fedb00;
     color: black;
     border: none;
-    margin: 0;
+    margin: 0 auto;
+    width: auto;
     cursor: pointer;
-    transition: transform 0.3s ease-out; }
-    #contact input[type='submit']:hover {
+    padding: 0 1rem;
+    transition: transform 0.3s ease-out;
+    -webkit-appearance: none;
+    appearance: none;
+    margin-bottom: 6rem; }
+    #page input[type='submit']:hover {
       transform: scale(1.05); }
-  @media screen and (min-width: 992px) {
-    #contact input[type='submit'] {
-      margin-left: 0.5rem; } }
-  #contact .icons {
+  #page .icons {
     text-align: center; }
-  #contact i {
+  #page i {
     color: white;
     font-size: 5rem; }
 
@@ -9078,6 +9116,9 @@ body:not(.home) article.single {
     z-index: 3;
     position: relative;
     text-shadow: 1px 1px 1px #fff8cb; }
+
+body.page .content {
+  padding: 0; }
 
 @media screen and (min-width: 576px) {
   .js #lemon-slot .copy, .js #hoola-slot .copy {
@@ -9178,3 +9219,26 @@ body:not(.home) article.single {
   #hoola-bg.finished path {
     stroke-width: 0 !important;
     fill-opacity: 1; }
+
+/*
+Page designs
+
+*/
+.page-template-page-boomtown .fixed-backdrop {
+  background-color: black;
+  opacity: 0.6; }
+  @media screen and (min-width: 576px) {
+    .page-template-page-boomtown .fixed-backdrop {
+      background-image: url("../img/pages/hoochlife-small.jpg"); } }
+  @media screen and (min-width: 768px) {
+    .page-template-page-boomtown .fixed-backdrop {
+      background-image: url("../img/pages/hoochlife-medium.jpg"); } }
+  @media screen and (min-width: 992px) {
+    .page-template-page-boomtown .fixed-backdrop {
+      background-image: url("../img/pages/hoochlife-large.jpg"); } }
+  @media screen and (min-width: 1200px) {
+    .page-template-page-boomtown .fixed-backdrop {
+      background-image: url("../img/pages/boomtown-bg.png"); } }
+  @media screen and (min-width: 1921px) {
+    .page-template-page-boomtown .fixed-backdrop {
+      background-image: url("../img/pages/hoochlife-full.jpg"); } }

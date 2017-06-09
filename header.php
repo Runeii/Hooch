@@ -1,35 +1,6 @@
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> class="no-js no-svg intro">
-<script>
-  (function(html) {
-    html.className = html.className.replace(/\bno-js\b/, 'js');
-  })(document.documentElement);
-</script>
-<style type"text/javascript">
-  .js body {
-      background-color: black;
-  }
-  .js body:not(.pace-done) nav, .js body:not(.pace-done) main, .js body:not(.pace-done) #hoochlife_intro svg {
-    opacity:0;
-    transition:none;
-  }
-  .js body.pace-done nav ul, .js body.pace-done main, .js body.pace-done #hoochlife_intro svg {
-    opacity:initial;
-    transition:opacity 0.5s;
-  }
-  .js body:not(.pace-done) #hoochlife_intro {
-    background-color:rgba(0,0,0,1);
-  }
- .js body.pace-done #hoochlife_intro {
-   background-color:rgba(0,0,0,0);
- }
- .js body:not(.pace-done) #hoochlife_intro,
- .js body:not(.pace-done) #hoochlife_intro svg,
- .js body.pace-done #hoochlife_intro,
- .js body.pace-done #hoochlife_intro svg {
-   transition:opacity 0.5s linear, background-color 0.5s linear 0.25s;
- }
-</style>
+<?php include('loader.php');?>
 <head>
 <title><?php wp_title(); ?></title>
 <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -75,20 +46,22 @@
 </nav>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php _e( 'Skip to content', 'hooch' ); ?></a>
-	<header id="header" class="site-header container-fluid" role="container">
   <?php
     if(is_home()) { ?>
-      <div id="hoochlife_intro">
-        <?php include("./wp-content/themes/hooch/assets/img/campaigns/hoochlife/hoochlife_logo.svg"); ?>
-      </div>
-      <?php
+    	<header id="header" class="site-header container-fluid" role="container">
+        <div id="hoochlife_intro">
+          <?php include("./wp-content/themes/hooch/assets/img/campaigns/hoochlife/hoochlife_logo.svg"); ?>
+        </div>
+      </header>
+    <?php
         include("./wp-content/themes/hooch/assets/svg/Asset 8.svg");
-      } else { ?>
-      <div id="single_header">
-        <?php
-          echo '<div class="img">' . get_the_post_thumbnail() . '</div>';
-          echo '<h1 class="banner">' . get_the_title() . '</h1>';
-        ?>
-      </div>
+      } elseif(is_singular('post')) { ?>
+    	<header id="header" class="site-header container-fluid" role="container">
+        <div id="single_header">
+          <?php
+            echo '<div class="img">' . get_the_post_thumbnail() . '</div>';
+            echo '<h1 class="banner">' . get_the_title() . '</h1>';
+          ?>
+        </div>
+      </header>
     <?php } ?>
-  </header>

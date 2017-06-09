@@ -6,14 +6,14 @@ module.exports = function(grunt) {
     watch: {
       sass: {
         files: 'assets/sass/*.scss',
-        tasks: ['sass:dev', 'notify:successCss'],
+        tasks: ['sass:dev'],
       },
       js: {
         files: [
           'assets/js/src/*.js',
           'Gruntfile.js'
         ],
-        tasks: ['jshint','babel','concat','uglify:scripts','notify:successJs']
+        tasks: ['babel','concat','uglify:scripts']
       }
     },
     sass: {
@@ -36,27 +36,15 @@ module.exports = function(grunt) {
       options: {
         map: false,
         processors: [
-          require('autoprefixer')({browsers: ['last 1 version', '> 1%', 'ie 8']})
+          require('autoprefixer')({browsers: ['last 1 version', '> 1%', 'ie 8']}),
+          require('postcss-clean')()
         ]
       },
       dist: {
         files: {
-          'assets/css/style-prefixed.css': ['assets/css/style.css']
+          'assets/css/style-min.css': ['assets/css/style.css']
         }
       }
-    },
-    cssmin: {
-      combine: {
-        files: {
-          'assets/css/style-min.css': ['assets/css/style-prefixed.css'/*, 'assets/css/vendors/*' */]
-        },
-      },
-    },
-    jshint: {
-      options: {
-        jshintrc: '.jshintrc'
-      },
-      all: ['Gruntfile.js', 'assets/js/src/main.js']
     },
     babel: {
         options: {
@@ -97,33 +85,7 @@ module.exports = function(grunt) {
       options: {
         watchTask: true,
         server: false,
-        proxy: 'localhost:80'
-      }
-    },
-    notify: {
-      options: {
-        enabled: true,
-        max_jshint_notifications: 5,
-        success: true,
-        duration: 3
-      },
-      successCss: {
-          options:{
-              title: "Grunt successful",
-              message: "All CSS tasks complete"
-          }
-      },
-      successJs: {
-          options:{
-              title: "Grunt successful",
-              message: "All JS tasks complete"
-          }
-      },
-      successProduction: {
-          options:{
-              title: "Grunt successful",
-              message: "Project prepared for production"
-          }
+        proxy: 'localhost:8080'
       }
     }
   });
@@ -132,14 +94,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-sass');
   grunt.loadNpmTasks('grunt-postcss');
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
-  grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-concat');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-browser-sync');
-  grunt.loadNpmTasks('grunt-notify');
   grunt.loadNpmTasks('grunt-babel');
   // Register the default tasks.
-  grunt.registerTask('default', ['browserSync', 'watch', 'notify']);
-  grunt.registerTask('prod', ['sass:dist', 'postcss', 'cssmin', 'jshint','babel','concat','uglify:scripts', 'notify:successProduction']);
+  grunt.registerTask('default', ['browserSync', 'watch']);
+  grunt.registerTask('prod', ['sass:dist', 'postcss','babel','concat','uglify']);
 };
