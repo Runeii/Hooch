@@ -9055,6 +9055,8 @@ footer {
     margin-bottom: 6rem; }
     #page input[type='submit']:hover {
       transform: scale(1.05); }
+  #page .wpcf7-recaptcha {
+    margin-bottom: 1.5rem; }
   #page .icons {
     text-align: center; }
   #page i {
