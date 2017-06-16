@@ -1130,7 +1130,7 @@ Page designs
         transform:scale(1.05);
       }
     }
-    .wpcf7-checkbox {  
+    .wpcf7-checkbox {
       float: right;
     }
     .wpcf7-recaptcha {
@@ -1176,21 +1176,21 @@ Page designs
   .fixed-backdrop {
     background-color:$black;
     opacity:0.4;
-    background-image:url('../img/pages/boomtown-bg-mobile.png');
+    background-image:url('../img/pages/boomtown-bg-mobile.jpg');
     @media #{$small} {
-      background-image:url('../img/pages/boomtown-bg-small.png');
+      background-image:url('../img/pages/boomtown-bg-small.jpg');
     }
     @media #{$medium} {
-      background-image:url('../img/pages/boomtown-bg-medium.png');
+      background-image:url('../img/pages/boomtown-bg-medium.jpg');
     }
     @media #{$large} {
-      background-image:url('../img/pages/boomtown-bg.png');
+      background-image:url('../img/pages/boomtown-bg.jpg');
     }
     @media #{$extra-large} {
-      background-image:url('../img/pages/boomtown-bg.png');
+      background-image:url('../img/pages/boomtown-bg.jpg');
     }
     @media #{$full} {
-      background-image:url('../img/pages/boomtown-bg.png');
+      background-image:url('../img/pages/boomtown-bg.jpg');
     }
   }
 }

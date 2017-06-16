@@ -9269,19 +9269,19 @@ Page designs
 .page-template-page-boomtown .fixed-backdrop {
   background-color: black;
   opacity: 0.4;
-  background-image: url("../img/pages/boomtown-bg-mobile.png"); }
+  background-image: url("../img/pages/boomtown-bg-mobile.jpg"); }
   @media screen and (min-width: 576px) {
     .page-template-page-boomtown .fixed-backdrop {
-      background-image: url("../img/pages/boomtown-bg-small.png"); } }
+      background-image: url("../img/pages/boomtown-bg-small.jpg"); } }
   @media screen and (min-width: 768px) {
     .page-template-page-boomtown .fixed-backdrop {
-      background-image: url("../img/pages/boomtown-bg-medium.png"); } }
+      background-image: url("../img/pages/boomtown-bg-medium.jpg"); } }
   @media screen and (min-width: 992px) {
     .page-template-page-boomtown .fixed-backdrop {
-      background-image: url("../img/pages/boomtown-bg.png"); } }
+      background-image: url("../img/pages/boomtown-bg.jpg"); } }
   @media screen and (min-width: 1200px) {
     .page-template-page-boomtown .fixed-backdrop {
-      background-image: url("../img/pages/boomtown-bg.png"); } }
+      background-image: url("../img/pages/boomtown-bg.jpg"); } }
   @media screen and (min-width: 1921px) {
     .page-template-page-boomtown .fixed-backdrop {
-      background-image: url("../img/pages/boomtown-bg.png"); } }
+      background-image: url("../img/pages/boomtown-bg.jpg"); } }
