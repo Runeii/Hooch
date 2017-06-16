@@ -111,7 +111,8 @@ get_header();
       </div>
     </div>
   </section>
-  <section id="whatson">
+  <section id="whatson" class="ignore">
+    <!--
     <div class="fixed-backdrop">&nbsp;</div>
     <div class="content">
       <div class="container">
@@ -125,7 +126,7 @@ get_header();
           getWhatsOn();
         ?>
       </div>
-    </div>
+    </div>-->
   </section>
   <section id="social">
     <div class="content">

@@ -7,14 +7,14 @@ module.exports = function(grunt) {
       sass: {
         files: 'assets/sass/*.scss',
         tasks: ['sass:dev'],
-      },
+      }/*,
       js: {
         files: [
           'assets/js/src/*.js',
           'Gruntfile.js'
         ],
         tasks: ['babel','concat','uglify:scripts']
-      }
+      }*/
     },
     sass: {
         options: {

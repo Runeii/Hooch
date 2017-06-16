@@ -52,9 +52,11 @@
         <div id="hoochlife_intro">
           <?php include("./wp-content/themes/hooch/assets/img/campaigns/hoochlife/hoochlife_logo.svg"); ?>
         </div>
+        <?php
+          //  include("./wp-content/themes/hooch/assets/svg/Asset 8.svg");
+          ?>
       </header>
     <?php
-        include("./wp-content/themes/hooch/assets/svg/Asset 8.svg");
       } elseif(is_singular('post')) { ?>
     	<header id="header" class="site-header container-fluid" role="container">
         <div id="single_header">

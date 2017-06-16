@@ -812,111 +812,6 @@ footer {
     font-size:5rem;
   }
 }
-#page {
-  position: relative;
-  z-index:3;
-  padding:3rem 0 1.5rem;
-  @media #{$small} {
-    margin:0;
-  }
-  .banner {
-    color: white;
-  }
-  .sub-banner {
-    color: $yellow;
-    margin-bottom:3rem;
-    @media #{$small} {
-      margin-bottom:6rem;
-    }
-  }
-  input, label, .wpcf7-list-item-label {
-    text-transform: uppercase;
-    font-family:$header-font;
-    font-weight:bold;
-    font-size:2rem;
-    @media #{$small} {
-      font-size:2.5rem;
-    }
-  }
-  .wpcf7-list-item-label {
-    font-size:0.667rem;
-    @media #{$small} {
-      font-size:1rem;
-    }
-  }
-  input {
-    background-color:$yellow;
-    border-color:transparent;
-    color:rgba($black, 1);
-    transition: 0.5s all;
-    padding:0;
-    outline:none !important;
-    flex-grow:0.4;
-    text-align:center;
-    max-width: 100%;
-    width:100%;
-    @media #{$small} {
-      padding:0 2rem 0 1rem;
-      text-align:left;
-      animation-direction: normal;
-      animation-duration: 2s;
-      animation-iteration-count: infinite;
-      animation-name: border-left-blink;
-      animation-timing-function: ease;
-    }
-    &::placeholder {
-      color:rgba($black, 1);
-      transition: 0.5s all;
-    }
-    &:hover {
-      border-left-color:transparent;
-      border-bottom-color:rgba($yellow, 0.4);
-      animation:none !important;
-      &::placeholder {
-        margin:initial 2rem;
-        color:rgba($yellow, 0.4);
-      }
-    }
-    &:focus {
-      border-left-color:transparent;
-      border-bottom-color:rgba($yellow, 1);
-      animation:none !important;
-    }
-  }
-  input[type='checkbox'] {
-    width:1rem;
-    height:1rem;
-  }
-  .wpcf7-checkbox span.wpcf7-list-item {
-    margin:1.5rem 0;
-  }
-  input[type='submit'] {
-    background-color:$yellow;
-    color:$black;
-    border:none;
-    margin:0 auto;
-    width:auto;
-    cursor:pointer;
-    padding:0 1rem;
-    transition: transform 0.3s ease-out;
-    -webkit-appearance:none;
-    appearance:none;
-    margin-bottom:6rem;
-    &:hover {
-      transform:scale(1.05);
-    }
-  }
-  .wpcf7-recaptcha {
-    margin-bottom:1.5rem;
-  }
-  .icons {
-      text-align: center;
-  }
-  i {
-    color: white;
-    font-size:5rem;
-  }
-}
 
 .content {
   padding:3rem 0 0;
@@ -1124,26 +1019,178 @@ body.page {
 Page designs
 
 */
-
+.page-template {
+  #singlepage {
+    position: relative;
+    z-index:3;
+    padding:3rem 0 1.5rem;
+    @media #{$small} {
+      margin:0;
+    }
+    .banner {
+      color: white;
+    }
+    .sub-banner {
+      color: $yellow;
+      margin-bottom:3rem;
+      @media #{$small} {
+        margin-bottom:6rem;
+      }
+    }
+    .copy {
+      padding: 0 15px;
+      color: #ffffff;
+      font-size: 1.25rem;
+      margin-top:-2rem;
+      margin-bottom:2rem;
+      @media #{$small} {
+        margin-top:-3rem;
+        margin-bottom:3rem;
+      }
+    }
+    input, label, .wpcf7-list-item-label {
+      text-transform: uppercase;
+      font-family:$header-font;
+      font-weight:bold;
+      font-size:2rem;
+      @media #{$small} {
+        font-size:2.5rem;
+      }
+    }
+    .wpcf7-list-item-label {
+      font-size:0.667rem;
+      @media #{$small} {
+        font-size:1rem;
+      }
+    }
+    input {
+      background-color:$yellow;
+      border-color:transparent;
+      color:rgba($black, 1);
+      transition: 0.5s all;
+      padding:0;
+      outline:none !important;
+      flex-grow:0.4;
+      text-align:left;
+      max-width: 100%;
+      width:100%;
+      @media #{$small} {
+        padding:0 2rem 0 1rem;
+        animation-direction: normal;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+        animation-name: border-left-blink;
+        animation-timing-function: ease;
+      }
+      &::placeholder {
+        color:rgba($black, 1);
+        transition: 0.5s all;
+      }
+      &:hover {
+        border-left-color:transparent;
+        border-bottom-color:rgba($yellow, 0.4);
+        animation:none !important;
+        &::placeholder {
+          margin:initial 2rem;
+          color:rgba($yellow, 0.4);
+        }
+      }
+      &:focus {
+        border-left-color:transparent;
+        border-bottom-color:rgba($yellow, 1);
+        animation:none !important;
+      }
+    }
+    input[type='checkbox'] {
+      width:1rem;
+      height:1rem;
+    }
+    .wpcf7-checkbox span.wpcf7-list-item {
+      margin:1.5rem 0;
+    }
+    input[type='submit'] {
+      background-color:$yellow;
+      color:$black;
+      border:none;
+      margin:0 auto;
+      width:auto;
+      cursor:pointer;
+      padding:0 1rem;
+      transition: transform 0.3s ease-out;
+      -webkit-appearance:none;
+      appearance:none;
+      text-align: center;
+      display: block;
+      @media #{$small} {
+        float: right;
+        clear: both;
+        margin-bottom:6rem;
+      }
+      &:hover {
+        transform:scale(1.05);
+      }
+    }
+    .wpcf7-checkbox {  
+      float: right;
+    }
+    .wpcf7-recaptcha {
+      margin-bottom:1.5rem;
+      text-align:center;
+      @media #{$small} {
+        float: right;
+        clear: both;
+      }
+      > div {
+        margin: 0 auto;
+        @media #{$small} {
+          margin:0;
+        }
+      }
+    }
+    .icons {
+        text-align: center;
+    }
+    i {
+      color: white;
+      font-size:5rem;
+    }
+  }
+  .links {
+    display: flex;
+    justify-content: space-around;
+  }
+  #hoochlife {
+    background-color::$yellow;
+    .sub-banner {
+      color:black;
+    }
+    .row:last-of-type {
+      margin-bottom:0;
+      .col-12:last-of-type {
+        opacity: 0;
+      }
+    }
+  }
+}
 .page-template-page-boomtown {
   .fixed-backdrop {
     background-color:$black;
-    opacity:0.6;
-    background-image:url('../img/pages/boomtown-bg-mobile.jpg');
+    opacity:0.4;
+    background-image:url('../img/pages/boomtown-bg-mobile.png');
     @media #{$small} {
-      background-image:url('../img/pages/boomtown-bg-small.jpg');
+      background-image:url('../img/pages/boomtown-bg-small.png');
     }
     @media #{$medium} {
-      background-image:url('../img/pages/boomtown-bg-medium.jpg');
+      background-image:url('../img/pages/boomtown-bg-medium.png');
     }
     @media #{$large} {
-      background-image:url('../img/pages/boomtown-bg.jpg');
+      background-image:url('../img/pages/boomtown-bg.png');
     }
     @media #{$extra-large} {
       background-image:url('../img/pages/boomtown-bg.png');
     }
     @media #{$full} {
-      background-image:url('../img/pages/boomtown-bg.jpg');
+      background-image:url('../img/pages/boomtown-bg.png');
     }
   }
 }
