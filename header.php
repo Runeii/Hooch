@@ -50,11 +50,9 @@
     if(is_home()) { ?>
     	<header id="header" class="site-header container-fluid" role="container">
         <div id="hoochlife_intro">
-          <?php include("./wp-content/themes/hooch/assets/img/campaigns/hoochlife/hoochlife_logo.svg"); ?>
+          <div class="click_block"></div>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Vh1s7l6Qlz8?mute=1&playlist=Vh1s7l6Qlz8&end=36&autoplay=1&controls=0&disablekb=1&modestbranding=1&playsinline=1&showinfo=0&loop=0&rel=0" frameborder="0"></iframe>
         </div>
-        <?php
-          //  include("./wp-content/themes/hooch/assets/svg/Asset 8.svg");
-          ?>
       </header>
     <?php
       } elseif(is_singular('post')) { ?>

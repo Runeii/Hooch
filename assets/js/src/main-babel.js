@@ -6,17 +6,18 @@ var myLazyLoad = new LazyLoad();
 (function ($) {
   var windowWidth, windowHeight, whatson, whatson_bg, section_stages, section;
   windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-  console.log('What');
-  if (windowWidth >= 768) {
+  /*
+  Legacy code: handled video background on HoochLife section
+  if(windowWidth >= 768){
     var sources = document.querySelectorAll('video.background-video source');
     var video = document.querySelector('video.background-video');
     console.log('run');
-    for (var i = 0; i < sources.length; i++) {
+    for(var i = 0; i<sources.length;i++) {
       console.log('Touch video ' + i);
       sources[i].setAttribute('src', sources[i].getAttribute('data-src'));
     }
     video.load();
-  }
+  } */
   VivusHoola = new Vivus('hoola-bg', {
     duration: 100,
     file: '/wp-content/themes/hooch/assets/svg/Hoola-bg.svg',
@@ -86,3 +87,12 @@ var myLazyLoad = new LazyLoad();
     cacheElements();
   });
 })(jQuery);
+
+(function (i, s, o, g, r, a, m) {
+  i['GoogleAnalyticsObject'] = r;i[r] = i[r] || function () {
+    (i[r].q = i[r].q || []).push(arguments);
+  }, i[r].l = 1 * new Date();a = s.createElement(o), m = s.getElementsByTagName(o)[0];a.async = 1;a.src = g;m.parentNode.insertBefore(a, m);
+})(window, document, 'script', 'https://www.google-analytics.com/analytics.js', 'ga');
+
+ga('create', 'UA-8273012-16', 'auto');
+ga('send', 'pageview');

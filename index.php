@@ -3,11 +3,11 @@ get_header();
 ?>
 <main>
   <section id="hoochlife">
-    <div class="fixed-backdrop">
-      <video poster="<?php echo get_template_directory_uri(); ?>/assets/video/hoochlife_thumbnail.jpg" id="bgvid" class="background-video" playsinline autoplay muted loop>
+    <!--  <div class="fixed-backdrop">
+    <video poster="<?php echo get_template_directory_uri(); ?>/assets/video/hoochlife_thumbnail.jpg" id="bgvid" class="background-video" playsinline autoplay muted loop>
         <source data-src="<?php echo get_template_directory_uri(); ?>/assets/video/hoochlife.mp4" type="video/mp4">
       </video>
-    </div>
+    </div> -->
     <div class="container">
       <div class="row align-items-start">
         <div class="col-12">
@@ -15,34 +15,34 @@ get_header();
           <p class="sub-banner">Wish every day was the weekend?</p>
         </div>
       </div>
-      <div class="row align-items-center lede">
-        <div class="col-12 col-sm-8 offset-sm-2 col-md-8">
-          <p>Yeah we do too, and even if we can't make your boss give you permanent holidays we've got the next best thing. For 14 weeks from Spring Bank Holiday to the late August Bank Holiday the #HoochLife reigns supreme.</p>
+      <div class="row align-items-center textrow">
+        <div class="col-12 col-md-7">
+          <p class="lede">Yeah we do too, and even if we can't make your boss give you permanent holidays we've got the next best thing. For 14 weeks from Spring Bank Holiday to the late August Bank Holiday the #HoochLife reigns supreme.</p>
         </div>
-      </div>
-      <div class="row align-items-center">
-        <div class="col-12 col-sm-5 text-center">
-          <?php echo wp_get_attachment_image(473, 'image_300', false, array('class' => 'tenpack')); ?>
-          <!--<img src="<?php echo get_template_directory_uri(); ?>/assets/img/campaigns/hoochlife/hoochlife_10pack.png" class="tenpack" />-->
-        </div>
-        <div class="col-12 col-sm-7">
+        <div class="col-12 col-lg-7">
           <p>In supermarkets we're giving away on point festival merch with our Hooch patented flip out bucket hats (Kevin and Perry eat your heart out) or a pair of Hooch sunnies free in over 10,000 10x275ml packs. Our special packs are available at TESCO, Morrison's, Bargain Booze and other retailers but when they're gone they're gone people.</p>
         </div>
-      </div>
-      <div class="row align-items-center">
-        <div class="col-12 col-sm-6 col-md-6 custom-text-right">
-          <p>We'll also be keeping you entertained when you're clock watching for 5pm Friday with loads of vids, games and comps.</p>
+        <div class="col-12 col-md-5 image">
+          <?php // echo wp_get_attachment_image(473, 'image_300', false, array('class' => 'tenpack')); ?>
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/campaigns/hoochlife/hoochlife_10pack_spray.png" class="tenpack" />
         </div>
-        <div class="col-12 col-sm-6 col-md-6 text-center">
-          <?php echo wp_get_attachment_image(474, 'image_400', false, array('class' => 'social')); ?>
-          <!--<img src="<?php echo get_template_directory_uri(); ?>/assets/img/campaigns/hoochlife/hoochlife_social.jpg" class="social" />-->
+      </div>
+      <div class="row socialrow">
+        <div class="col-12 col-md-7">
+          <?php // echo wp_get_attachment_image(474, 'image_630', false, array('class' => 'social')); ?>
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/campaigns/hoochlife/hoochlife_competition.jpg" class="social" />
+        </div>
+        <div class="col-12 col-md-5">
+          <p class="lede">We'll also be keeping you entertained when you're clock watching for 5pm Friday with loads of vids, games and comps.</p>
+            <?php // echo wp_get_attachment_image(474, 'image_400', false, array('class' => 'hoochlife_tag')); ?>
+          <img src="<?php echo get_template_directory_uri(); ?>/assets/img/campaigns/hoochlife/hoochlife_white_spray.png" class="hoochlife_tag" />
         </div>
       </div>
       <div class="row align-items-center justify-content-center">
         <div class="col-12">
-          <a href="https://www.facebook.com/hoochlemonbrew" class="sub-banner"><i class="icon-facebook-squared"></i></a>
-          <a href="https://twitter.com/HoochLemonBrew" class="sub-banner"><i class="icon-twitter-squared"></i></a>
-          <a href="https://www.instagram.com/hoochdrink" class="sub-banner"><i class="icon-instagram"></i></a>
+          <a href="https://www.facebook.com/hoochlemonbrew"><i class="icon-facebook-squared"></i></a>
+          <a href="https://twitter.com/HoochLemonBrew"><i class="icon-twitter-squared"></i></a>
+          <a href="https://www.instagram.com/hoochdrink"><i class="icon-instagram"></i></a>
         </div>
         <div class="col-12">
           <p>Stay tuned to our social channels for more info.</p>

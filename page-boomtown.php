@@ -16,7 +16,7 @@ get_header();
           <div class="row align-items-center">
             <div class="col-12">
               <h2 class="banner">Contest.</h2>
-              <p class="sub-banner">Win 2 x tickets for you and a mate to Boomtown!</p>
+              <p class="sub-banner">Win 2 x tickets for you and a mate to BoomTown!</p>
             </div>
             <div class="col-12 col-md-8 offset-md-2 copy">
               <p>To celebrate the summer of Hooch we are giving away 2 pairs of tickets to Boom Town Fair.<br /><br />Now in its 9th year BoomTown Fair is a music, arts and family festival that takes place at Matterley Estate, nr. Winchester, Hampshire, and will run from Thursday 10th until Sunday 13th August 2017. This year's Chapter is titled 'Behind The Mask'.</p>
